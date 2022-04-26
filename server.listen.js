@@ -28,7 +28,7 @@ io.on("connection", (socket) => {
 
   socket.on("getMessages", () => {
     messages.forEach((message) => {
-      socket.emit("message", message);
+      io.emit("message", messages);
     });
   });
 
