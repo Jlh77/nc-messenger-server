@@ -4,12 +4,12 @@ const cors = require("cors");
 app.use(cors());
 
 //const server = require("./server.listen");
-const { port = 9090 } = process.env;
-console.log(port);
+const { PORT = 9090 } = process.env;
+console.log(PORT);
 
-const server = app.listen(port, (err) => {
+const server = app.listen(PORT, (err) => {
   if (err) throw err;
-  console.log(`Running chat server at ${port}...`);
+  console.log(`Running chat server at ${PORT}...`);
 });
 const io = require("socket.io")(server, {
   cors: {

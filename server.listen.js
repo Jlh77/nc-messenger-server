@@ -1,9 +1,9 @@
 const app = require("./server");
-const { port = 9090 } = process.env;
+const { PORT = 9090 } = process.env;
 
-const server = app.listen(port, (err) => {
+const server = app.listen(PORT, (err) => {
   if (err) throw err;
-  console.log(`Running chat server at ${port}...`);
+  console.log(`Running chat server at ${PORT}...`);
 });
 
 module.exports = server;
