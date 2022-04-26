@@ -60,4 +60,8 @@ app.get("/", (req, res) => {
   res.send("test");
 });
 
+app.get("/test", (req, res) => {
+  res.send("it works");
+});
+
 module.exports = app;
