@@ -5,6 +5,7 @@ app.use(cors());
 
 //const server = require("./server.listen");
 const { port = 9090 } = process.env;
+console.log(port);
 
 const server = app.listen(port, (err) => {
   if (err) throw err;
